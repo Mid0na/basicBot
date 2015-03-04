@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/Mid0na/basicBot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -183,22 +183,22 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
-        cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        scriptLink: "https://rawgit.com/Mid0na/basicBot/master/basicBot.js",
+        cmdLink: "http://rawgit.com/Mid0na/basicBot/master/commands.md",
+        chatLink: "https://rawgit.com/Mid0na/basicBot/master/lang/fr.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
-            language: "english",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
-            startupCap: 1, // 1-200
-            startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            botName: "LGD_Bot",
+            language: "French",
+            chatLink: "https://rawgit.com/Mid0na/basicBot/master/lang/fr.json",
+            startupCap: 200, // 1-200
+            startupVolume: 15, // 0-100
+            startupEmoji: true, // true or false
             maximumAfk: 120,
-            afkRemoval: true,
+            afkRemoval: false,
             maximumDc: 60,
             bouncerPlus: true,
             blacklistEnabled: true,
@@ -210,19 +210,19 @@
             voteSkip: false,
             voteSkipLimit: 10,
             timeGuard: true,
-            maximumSongLength: 10,
+            maximumSongLength: 8,
             autodisable: true,
-            commandCooldown: 30,
+            commandCooldown: 1,
             usercommandsEnabled: true,
             lockskipPosition: 3,
             lockskipReasons: [
-                ["theme", "This song does not fit the room theme. "],
-                ["op", "This song is on the OP list. "],
-                ["history", "This song is in the history. "],
-                ["mix", "You played a mix, which is against the rules. "],
-                ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["unavailable", "The song you played was not available for some users. "]
+                ["theme", "Cette chanson ne correspond pas au thème de la salle. "],
+                ["op", "Cette chanson est dans la liste des chansons trop jouées. "],
+                ["history", "Cette chanson est dans l'historique. "],
+                ["mix", "Les mix ne sont pas autorisés. "],
+                ["sound", "Cette chanson a un son de mauvaise qualité / pas de son. "],
+                ["nsfw", "La chanson proposée a un contenu NSFW (image ou son). "],
+                ["unavailable", "La chanson proposée n'est pas disponible pour certains utilisateurs. "]
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
@@ -240,7 +240,7 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
@@ -1626,26 +1626,26 @@
                 command: 'cookie',
                 rank: 'user',
                 type: 'startsWith',
-                cookies: ['has given you a chocolate chip cookie!',
-                    'has given you a soft homemade oatmeal cookie!',
-                    'has given you a plain, dry, old cookie. It was the last one in the bag. Gross.',
-                    'gives you a sugar cookie. What, no frosting and sprinkles? 0/10 would not touch.',
-                    'gives you a chocolate chip cookie. Oh wait, those are raisins. Bleck!',
-                    'gives you an enormous cookie. Poking it gives you more cookies. Weird.',
-                    'gives you a fortune cookie. It reads "Why aren\'t you working on any projects?"',
-                    'gives you a fortune cookie. It reads "Give that special someone a compliment"',
-                    'gives you a fortune cookie. It reads "Take a risk!"',
-                    'gives you a fortune cookie. It reads "Go outside."',
-                    'gives you a fortune cookie. It reads "Don\'t forget to eat your veggies!"',
-                    'gives you a fortune cookie. It reads "Do you even lift?"',
-                    'gives you a fortune cookie. It reads "m808 pls"',
-                    'gives you a fortune cookie. It reads "If you move your hips, you\'ll get all the ladies."',
-                    'gives you a fortune cookie. It reads "I love you."',
-                    'gives you a Golden Cookie. You can\'t eat it because it is made of gold. Dammit.',
-                    'gives you an Oreo cookie with a glass of milk!',
-                    'gives you a rainbow cookie made with love :heart:',
-                    'gives you an old cookie that was left out in the rain, it\'s moldy.',
-                    'bakes you fresh cookies, it smells amazing.'
+                cookies: ['t\'a donné un cookie au chocolat !',
+                    't\'a donné un cookie fait maison !',
+                    't\'a donné un vieux cookie sec. C\'était le dernier du paquet. -_-',
+                    't\'a donné un cookie fait maison ! Avec un ingrédient mystère...',
+                    'te donne un cookie au chocolat. Ah non, ce sont des raisins. Beurk !',
+                    'te donne un énorme cookie à partager avec 2 personnes de cette salle !',
+                    'te donne un biscuit chinois ayant pour message : "Arrête de glander !"',
+                    'te donne un biscuit chinois ayant pour message : "Fais un compliment à une personne dans la salle"',
+                    'te donne un Poro Snax ^.^',
+                    'te donne un Poro Snax de la part de Braum. Au moins, il a une moustache, lui !',
+                    'te donne ton dixième Poro Snax... BOOOOM !',
+                    'te donne un biscuit chinois ayant pour message : "Alors, on est nul ?"',
+                    'te donne un biscuit chinois ayant pour message : "Noob !"',
+                    'te donne un biscuit chinois ayant pour message : "Bouge un peu ton corps, G33K 4 LIFE !"',
+                    'te donne un biscuit chinois ayant pour message : "Je t\'aime."',
+                    'te donne un cookie doré. Tu ne peux pas le manger car il est fait en or. Haha.',
+                    'te donne un Oreo avec un verre de lait !',
+                    'te donne un cookie arc-en-ciel fait avec amour :heart:',
+                    'te donne un vieux cookie resté dehors sous la pluie, tout mou.',
+                    'fait cuire des biscuits chocolatés, ça sent trop bon.'
                 ],
                 getCookie: function () {
                     var c = Math.floor(Math.random() * this.cookies.length);
