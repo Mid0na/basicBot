@@ -195,7 +195,7 @@
             language: "French",
             chatLink: "https://rawgit.com/Mid0na/basicBot/master/lang/fr.json",
             startupCap: 200, // 1-200
-            startupVolume: 10, // 0-100
+            startupVolume: 6, // 0-100
             startupEmoji: true, // true or false
             maximumAfk: 120,
             afkRemoval: false,
