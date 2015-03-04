@@ -1,4 +1,4 @@
-Commands:
+Commandes:
 =========
 
 Les variables entre parenthèses ( ) sont optionnelles.
