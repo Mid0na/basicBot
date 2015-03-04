@@ -1635,7 +1635,7 @@
                     'te donne un biscuit chinois ayant pour message : "Arrête de glander !"',
                     'te donne un biscuit chinois ayant pour message : "Fais un compliment à une personne dans la salle"',
                     'te donne un Poro Snax ^.^',
-                    'te donne un Poro Snax de la part de Braum. Au moins, il a une moustache, lui !',
+                    'te donne un Poro Snax de la part de Braum. Maintenant, tu as une moustache !',
                     'te donne ton dixième Poro Snax... BOOOOM !',
                     'te donne un biscuit chinois ayant pour message : "Alors, on est nul ?"',
                     'te donne un biscuit chinois ayant pour message : "Noob !"',
