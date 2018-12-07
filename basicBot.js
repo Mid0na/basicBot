@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Mid0na/basicBot/master/lang/langIndex.json", function (json) {
+        $.get("https://cdn.jsdelivr.net/gh/Mid0na/basicBot/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -183,9 +183,9 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Mid0na/basicBot/master/basicBot.js",
+        scriptLink: "https://cdn.jsdelivr.net/gh/Mid0na/basicBot/basicBot.js",
         cmdLink: "http://git.io/xHgo",
-        chatLink: "https://rawgit.com/Mid0na/basicBot/master/lang/fr.json",
+        chatLink: "https://cdn.jsdelivr.net/gh/Mid0na/basicBot/lang/fr.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -193,7 +193,7 @@
         settings: {
             botName: "LGD_Bot",
             language: "French",
-            chatLink: "https://rawgit.com/Mid0na/basicBot/master/lang/fr.json",
+            chatLink: "https://cdn.jsdelivr.net/gh/Mid0na/basicBot/lang/fr.json",
             startupCap: 200, // 1-200
             startupVolume: 6, // 0-100
             startupEmoji: true, // true or false
